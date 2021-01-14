@@ -38,8 +38,8 @@ function App() {
 
   return (
     <Switch>
-      <AuthRoute exact path='/' component={Home} />
       <Route exact path='/login' component={Gate} />
+      <AuthRoute exact path='/' component={Home} />
       
     </Switch>
   );

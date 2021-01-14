@@ -1,4 +1,10 @@
 import React, { useState } from 'react';
+import { BrowserRouter as Router, Switch, Route, Link, Redirect } from 'react-router-dom';
+
+import { firebase } from './config';
+import 'firebase/auth';
+
+const auth = firebase.auth();
 
 function Home() {
 
@@ -16,7 +22,7 @@ function Home() {
                     The Break
                     </div>
                     <div className='account'>
-        
+                        <SignOut />
                     </div>
                 </div>
             </div>
@@ -42,6 +48,19 @@ function Home() {
             </div>
         </>
     );
+}
+
+function SignOut() {
+  return auth.currentUser && (
+    <button 
+      onClick={() => {
+        sessionStorage.clear('userProfile');
+        auth.signOut();
+        <Redirect to={{ pathname: '/home' }} />
+      }}>
+        Sign Out
+    </button>
+  )
 }
 
 export default Home;

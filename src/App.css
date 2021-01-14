@@ -37,13 +37,37 @@ body {
 .whatsthepassword {
   background:#eee;
   display:flex;
-  align-items:center;
   justify-content:center;
+  flex-direction: column;
+  align-items:flex-start;
+  width:1000px;
+  margin:0 auto;
 }
 
 .whatsthepassword button {
   border:1px solid #eee;
-  background:red;
-  padding:20px;
+  color:rgb(0, 119, 255);
+  padding:15px 20px;
+  background:rgba(0, 132, 255, 0.3);
   box-sizing: border-box;
+  border-radius:4px;
+  transition:0.1s all cubic-bezier(0.075, 0.82, 0.165, 1);
+  cursor:pointer;
+}
+
+.whatsthepassword button:hover {
+  background:rgba(0, 132, 255, 0.7);
+  color:white;
+}
+
+.whatsthepassword .sign-in {
+
+}
+
+.whatsthepassword .notification {
+  background:rgba(255, 166, 0, 0.596);
+  padding:20px;
+  box-sizing:border-box;
+  border-radius:4px;
+  width:100%;
 }
