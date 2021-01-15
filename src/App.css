@@ -71,3 +71,42 @@ body {
   border-radius:4px;
   width:100%;
 }
+
+
+/* Select Article Tags styles */
+
+.s,
+.c,
+.p,
+.a,
+.t {
+  background:green;
+}
+
+/* when tag is de-selected */
+.s-a,
+.c-a,
+.p-a,
+.a-a,
+.t-a {
+  background:greenyellow;
+}
+
+
+.article-container {
+  padding-top:50px;
+  width:1200px;
+  margin:0 auto;
+  display:flex;
+  justify-content:space-between;
+  flex-wrap:wrap;
+}
+
+.article-container .showie {
+  background:white;
+  padding:20px;
+  box-sizing: border-box;
+  box-shadow: 0 0 10px rgba(0,0,0,0.01);
+  border-radius:4px;
+  width:49%;
+}
